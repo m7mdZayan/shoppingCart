@@ -4,7 +4,7 @@ class Counter extends Component {
   render() {
     return (
       <div className="mb-5">
-        <h3>Counter {this.props.counter.id}</h3>
+        <h3>Product {this.props.counter.id}</h3>
         <span className={this.getBadgeClasses()}>
           {this.props.counter.value === 0 ? "Zero" : this.props.counter.value}
         </span>
@@ -19,6 +19,7 @@ class Counter extends Component {
         <button onClick={this.props.onDelete} className="btn btn-danger">
           delete
         </button>
+        <hr />
       </div>
     );
   }
