@@ -6,7 +6,7 @@ class Counter extends Component {
       <div className="mb-5">
         <h3>Counter {this.props.counter.id}</h3>
         <span className={this.getBadgeClasses()}>
-          {this.props.value === 0 ? "Zero" : this.props.counter.value}
+          {this.props.counter.value === 0 ? "Zero" : this.props.counter.value}
         </span>
         <br />
 
@@ -24,7 +24,7 @@ class Counter extends Component {
   }
 
   getBadgeClasses = () => {
-    let classes = "mb-2 badge badge-";
+    let classes = "mb-3 badge badge-";
     this.props.counter.value === 0
       ? (classes += "warning") // Zero => Yellow
       : this.props.counter.value < 0
